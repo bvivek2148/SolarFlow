@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SolarFlow - 3D Solar System with High-Quality Textures</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div id="tooltip"></div>
+
+    <div id="info-panel" class="info-panel">
+        <h3>SolarFlow - 3D Solar System</h3>
+        <p>🌟 Use mouse to rotate, zoom, and explore</p>
+        <p>🎛️ Adjust planet speeds with the controls</p>
+        <p>🪐 Click "Focus Planets" to tour each planet</p>
+        <p>⏸️ Use Pause/Resume to control animation</p>
+
+        <div class="realistic-features">
+            <p><strong>🔄 Realistic Rotations:</strong></p>
+            <p>♀️ Venus rotates anticlockwise (retrograde)</p>
+            <p>♅ Uranus rotates anticlockwise & tilted 90°</p>
+        </div>
+    </div>
+    
+    <div class="zoom-controls-container">
+        <div class="zoom-slider-wrapper">
+            <div class="zoom-header">
+                <div class="zoom-label">🔍 Zoom</div>
+                <div class="zoom-value" id="zoom-value">100%</div>
+            </div>
+            <input type="range" id="zoom-slider" class="zoom-slider"
+                   min="20" max="300" value="80" step="5">
+            <div class="zoom-indicators">
+                <span class="zoom-indicator" data-zoom="close">🔍</span>
+                <span class="zoom-indicator" data-zoom="medium">🌍</span>
+                <span class="zoom-indicator" data-zoom="far">🌌</span>
+            </div>
+        </div>
+        <div class="zoom-presets">
+            <button class="zoom-preset" data-zoom="25" title="Close View">🔍</button>
+            <button class="zoom-preset" data-zoom="80" title="Default View">🏠</button>
+            <button class="zoom-preset" data-zoom="150" title="System View">🌌</button>
+            <button class="zoom-preset" data-zoom="250" title="Galaxy View">⭐</button>
+        </div>
+    </div>
+    
+    <div class="control-panel">
+        <h2>Planet Speed Controls</h2>
+        <div class="global-controls">
+            <button id="pause-btn">Pause</button>
+            <button id="reset-btn">Reset Speeds</button>
+            <button id="focus-planets-btn">Focus Planets</button>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+            </div>
+        </div>
+        <div id="planet-controls">
+            <!-- Planet controls will be added dynamically -->
+        </div>
+    </div>
+
+    <!-- Three.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    
+    <!-- Application scripts -->
+    <script src="js/planets.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
