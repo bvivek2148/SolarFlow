@@ -330,5 +330,3 @@ SolarFlow represents the perfect fusion of **scientific accuracy**, **stunning v
 **Start your cosmic adventure today!** 🚀🌌
 
 ---
-
-*Made with ❤️ for space exploration and education*
